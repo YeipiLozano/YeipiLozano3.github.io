@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo layout flexbox</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function myFunction() {
+            const navigationBar = document.getElementById("navigation-bar");
+            if (navigationBar.className === "navigation-bar") {
+                navigationBar.className += " responsive";
+            } else {
+                navigationBar.className = "navigation-bar";
+            }
+        }
+    </script>
+</head>
+<body>
+<header id="header">
+    <h1> Edsger W. Dijkstra </h1>
+    <p>1930 - 2002</p>
+</header>
+
+<nav id="navigation-bar" class="navigation-bar">
+    <ul>
+        <li><a class="active" href="index.html">Inicio</a></li>
+        <li><a href="#">Página 2</a></li>
+        <li><a href="#">Página 3</a></li>
+        <li class="menu__hamburger-icon">
+            <a href="javascript:void(0);" onclick="myFunction()">
+                <i class="lni lni-menu"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<div id="main-content-container">
+    <aside id="links-sidebar">
+        <h2>Sitios de interés</h2>
+        <ul>
+            <li><a href="#">Sitio 1</a></li>
+            <li><a href="#">Sitio 2</a></li>
+            <li><a href="#">Sitio 3</a></li>
+            <li><a href="#">Sitio 4</a></li>
+            <li><a href="#">Sitio 5</a></li>
+        </ul>
+    </aside>
+    <section id="main-content">
+        <img src="Edsger_Dijkstra_1994.jpg" alt="Edsger Dijkstra 1994" class="main-content__img--full-width">
+
+        <h2>Biografía</h2>
+        <p>Edsger W. Dijkstra nació en Róterdam. Su padre, que fue presidente de la Sociedad Neerlandesa de Química,
+            había aprendido química durante la secundaria y más tarde de su superintendente. Su madre era matemática,
+            pero nunca tuvo un trabajo formal.</p>
+        <p>Dijkstra siempre había considerado emprender una carrera en Derecho y representar a los Países Bajos en las
+            Naciones Unidas. Sin embargo, tras graduarse en la escuela en 1948, bajo la dirección de sus padres estudió
+            matemáticas y física, y finalmente pasó a estudiar Física teórica en la Universidad de Leiden. Más tarde
+            trabajó como investigador para Burroughs Corporation a principios de los años 1970. En la Universidad de
+            Texas en Austin, Estados Unidos, ocupó el Schlumberger Centennial Chair in Computer Sciences. En 1965 dio
+            lugar al primer artículo científico en el campo de la computación concurrente y la programación
+            concurrente. Entre sus contribuciones a las ciencias de la computación está la solución del problema del
+            camino más corto, también conocido como el algoritmo de Dijkstra, la notación polaca inversa y el
+            relacionado algoritmo shunting yard, THE multiprogramming system, el algoritmo del banquero y la
+            construcción del semáforo para coordinar múltiples procesadores y programas.</p>
+
+        <h2>Personalidad y modo de trabajo</h2>
+        <p>Dijkstra es conocido como un "personaje" en el mundo de las ciencias de la computación. En el prólogo de su
+            libro A Discipline of Programming, escrito en 1976, declaró la siguiente frase: «Debido a la ausencia de una
+            bibliografía, no ofrezco ni explicación ni apología». De hecho, gran parte de sus artículos y libros no
+            tienen ninguna referencia. Esta ausencia de referencias fue criticada por muchos investigadores. Sin
+            embargo, Dijkstra eligió esta forma de trabajar para remarcar su autosuficiencia. </p>
+    </section>
+</div>
+
+<footer id="footer">
+    <div class="footer__social footer__section">
+        <h2>Mis redes</h2>
+
+        <div class="social__networks">
+            <div class="social__network">
+                <span class="social__icon-container"><i class="lni lni-github-original social__icon"></i></span>
+                <span class="social__icon-handler"> <a href="https://github.com/nomarlo"> nomarlo </a> </span>
+            </div>
+
+            <div class="social__network">
+                <span class="social__icon-container"><i class="lni lni-linkedin-original social__icon"></i></span>
+                <span class="social__icon-handler">
+                    <a href="https://www.linkedin.com/in/noe-l%C3%B3pez-hern%C3%A1ndez/"> Noé López </a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer__contact-form footer__section">
+        <h2>Contacto</h2>
+        <div>
+            <form>
+                <label for="contactEmail"> Correo electronico:</label>
+                <input id="contactEmail" required type="email" placeholder="Ingresa tu correo electronico">
+
+                <label for="contactMessage"> Mensaje:</label>
+                <textarea id="contactMessage" required rows="4" cols="50"> </textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <div class="footer__more-sites footer__section">
+        <h2>Otros de mis sitios</h2>
+        <ul>
+            <li><a href="#">Sitio 1</a></li>
+            <li><a href="#">Sitio 2</a></li>
+            <li><a href="#">Sitio 3</a></li>
+            <li><a href="#">Sitio 4</a></li>
+            <li><a href="#">Sitio 5</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
+
